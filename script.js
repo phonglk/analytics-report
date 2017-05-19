@@ -74,13 +74,19 @@ function replace(newDiv) {
   return document.querySelector('#root').replaceChild(newDiv, oldChild);
 }
 
+function doLoadThreadList() {
+  getTopList().then(threads => {
+    replace(_e('div', [
+      buildTable(threads),
+      _e('div', [_t(`Last update at ${new Date().toLocaleString()}. Auto reload after 15 seconds`)])
+    ]));
+    setTimeout(doLoadThreadList, 15000);
+  });
+}
+
 function main() {
   replace(_e('div', [_t('Loading Thớt ...')]));
-  getTopList().then(threads => {
-    replace(_e('div', [buildTable(threads)]));
-    console.log(threads);
-  });
-
+  doLoadThreadList();
 }
 
 // -- dom utils
