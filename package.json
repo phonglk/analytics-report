@@ -1,0 +1,22 @@
+{
+  "name": "analytics-report",
+  "version": "1.0.0",
+  "description": "public analytics report for voz living",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/analytics-report.git"
+  },
+  "author": "Le Khoi Phong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phonglk/analytics-report/issues"
+  },
+  "homepage": "https://github.com/phonglk/analytics-report#readme",
+  "dependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}
