@@ -85,7 +85,7 @@ function doLoadThreadList() {
 }
 
 function main() {
-  replace(_e('div', [_t('Loading Thớt ...')]));
+  replace(_e('div', [_t('Loading Thớt ... Lần đầu tiên thì hơi lâu tí nhé')]));
   doLoadThreadList();
 }
 
